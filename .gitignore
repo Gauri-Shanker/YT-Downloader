@@ -1,0 +1,191 @@
+# ========================================
+# YouTube Desktop Downloader - .gitignore
+# ========================================
+
+# ----------------
+# Python
+# ----------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+.env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ----------------
+# Node.js
+# ----------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# ----------------
+# Electron / Desktop Builds
+# ----------------
+out/
+release/
+dist-electron/
+dist-packaged/
+*.asar
+*.asar.unpacked
+
+# PyInstaller (Backend Builds)
+backend/dist/
+backend/build/
+*.spec
+app.spec
+backend/*.spec
+
+# ----------------
+# Project Specific
+# ----------------
+
+# Downloaded files (user content - don't commit)
+downloads/
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.mkv
+*.avi
+*.mov
+*.opus
+*.ogg
+*.wav
+*.aac
+
+# Logs
+logs/
+*.log
+app.log
+
+# Cookies (SENSITIVE - never commit!)
+cookies.txt
+backend/cookies.txt
+
+# Failed downloads tracking
+failed_downloads.txt
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ----------------
+# IDE & Editors
+# ----------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ----------------
+# OS Generated
+# ----------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ----------------
+# Environment Variables
+# ----------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+backend/.env
+
+# User Settings (stored in user home directory, not in repo)
+settings.json
+
+# ----------------
+# Build & Cache
+# ----------------
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+*.tsbuildinfo
+
+# ESLint & Prettier cache
+.eslintcache
+.prettiercache
+
+# ----------------
+# Testing
+# ----------------
+coverage/
+.nyc_output/
+htmlcov/
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+
+# ----------------
+# Misc
+# ----------------
+*.bak
+*.backup
+*.old
+*.orig
+
+# Local config overrides
+config.local.py
+settings.local.json
+
+# FFmpeg (if bundled locally)
+ffmpeg/
+ffmpeg.exe
+ffprobe.exe
+
+# yt-dlp cache
+.ytdlp_cache/
