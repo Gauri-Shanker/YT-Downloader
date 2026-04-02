@@ -99,6 +99,60 @@ cd ..
 npm install
 ```
 
+### Environment Configuration
+
+Create a `.env` file in **both** the root directory and `backend/` folder:
+
+**Root `.env`** (for Electron):
+```env
+# Backend Configuration
+FLASK_ENV=production
+DOWNLOAD_FOLDER=downloads
+MAX_WORKERS=2
+AUDIO_FORMAT=webm
+RATE_LIMIT_DELAY=2.0
+MAX_RETRIES=3
+COOKIES_FILE=cookies.txt
+DOWNLOAD_TIMEOUT=300
+
+# Optional: Add proxy if needed
+# PROXY=http://proxy.example.com:8080
+```
+
+**`backend/.env`** (for Flask):
+```env
+# Download settings
+DOWNLOAD_FOLDER=downloads
+MAX_WORKERS=2
+AUDIO_FORMAT=mp3
+RATE_LIMIT_DELAY=2.0
+MAX_RETRIES=3
+
+# Server settings
+PORT=5000
+DEBUG=True
+DOWNLOAD_TIMEOUT=300
+```
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DOWNLOAD_FOLDER` | Where downloaded files are saved | `downloads` |
+| `MAX_WORKERS` | Concurrent download threads | `2` |
+| `AUDIO_FORMAT` | Audio output format (mp3/webm) | `mp3` |
+| `RATE_LIMIT_DELAY` | Delay between requests (seconds) | `2.0` |
+| `MAX_RETRIES` | Number of retry attempts | `3` |
+| `DOWNLOAD_TIMEOUT` | Max download time (seconds) | `300` |
+| `COOKIES_FILE` | Path to cookies.txt for auth | `cookies.txt` |
+| `PORT` | Backend server port | `5000` |
+| `DEBUG` | Enable debug mode | `True` |
+
+> **Quick Setup:** Copy the example files:
+> ```bash
+> cp .env.example .env
+> cp backend/.env.example backend/.env
+> ```
+> Then edit with your preferred settings.
+
 ### Run in Development
 
 ```bash

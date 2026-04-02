@@ -32,7 +32,12 @@ venv/
 ENV/
 env/
 .venv/
-.env/
+
+# Environment files (contain sensitive config)
+.env
+backend/.env
+!.env.example
+!backend/.env.example
 
 # PyInstaller
 *.manifest
